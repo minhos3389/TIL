@@ -3,8 +3,12 @@
 ### 인덴트
 : 파이썬의 인덴트(Indent)는 공식 가이드인 PEP 8에 따라 공백 4칸을 원칙으로 한다.
 
+
+
 ### 네이밍 컨벤션
 : 파이썬의 변수명 네이밍 컨벤션(Naming Convention)은 각 단어를 밑줄(_)로 구분하여 표기하는 스네이크 케이스(Snake Case)를 따른다.
+
+
 
 ### 타입힌트
 : 파이썬은 동적 타이핑 언어임에도 , 타입을 지정할 수 있는 타입힌트(Type Hint)가 PEP484에서 추가되었다.
@@ -71,8 +75,7 @@ mypy를 통해서 타입힌트에 오류가 있는지 자동 확인가능하다.
 
     >>> for i in range(5):
         print(i, end=' ')
-    
-    # 0 1 2 3 4 
+    0 1 2 3 4
 ```
 range()는 range클래스를 리턴하며, for 문에서 사용할 경우 내부적으로는 제너레이터의 next()를 호출하듯 매번 다음 숫자를 생성해낸다.
 버전 3부터 range()함수가 제너레이터 역할을 하는 range()클래스를 리턴하는 형태로 변경됐고 xrange() 함수는 사라졌다.
@@ -87,8 +90,51 @@ enumerate()는 '열거하다'는 뜻의 함수로, 순서가 있는 자료형(li
     
     enumerate(a)
     <enumerate object at 0x1010f83f0>
-    list(enumerate(a))
-    # [(0, 1), (1, 2), (2, 3), (3, 2), (4, 45), (5, 2), (6, 5)]
+    >>> list(enumerate(a))
+    [(0, 1), (1, 2), (2, 3), (3, 2), (4, 45), (5, 2), (6, 5)]
 ```
 
 이처럼 list()로 결과를 추출할 수 있는데 , index를 자동으로 부여해주기 때문에 편리하게 사용된다.
+
+### 나눗셈 연산자 
+/ 는 나눗셈 연산자, // 는 정수형태의 몫(Quotient)를 구하는 Floor Division 기능을 수행한다. (수행시 type int형 반환)
+나머지는 %를 사용한다.
+
+divmod() 함수를 사용하면 몫과 나머지를 동시에 구할 수 있다.
+```Python
+    >>>divmod(5, 3)
+    (1, 2)
+```
+
+
+
+
+### print
+
+```Python
+    >>>print('A1', 'B2')
+    A1 B2
+
+    >>>print('A1', 'B2', sep=',')
+    A1,B2
+
+    >>>print('aa', end=' ')
+    >>>print('bb')
+    aa bb
+
+    >>> a = ['A', 'B']
+    >>>print(' '.join(a))
+    A B
+
+    >>> idx = 1
+    >>> fruit = "Apple"
+    >>> print('{0}: {1}'.format(idx + 1, fruit))
+    2: Apple
+
+    >>> print('{}: {}'.format(idx + 1, fruit))
+    2: Apple
+
+    # f-string을 사용하면 변수를 뒤에 별도로 부여할 필요도 없고 직관적이고 속도도 빠르다. (추천)
+    >>> print(f'{idx+1}:{fruit}')
+    2: Apple
+```
