@@ -1,12 +1,9 @@
-
-<img src ="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F680%2F1*EtUKaZLEF9k2QYCq6gaROw.jpeg&imgrefurl=https%3A%2F%2Fmedium.com%2Fhumanscape-tech%2F%25ED%258C%258C%25EC%259D%25B4%25EC%258D%25AC%25EC%259D%2598-%25EA%25B0%259D%25EC%25B2%25B4-%25EC%25B0%25B8%25EC%25A1%25B0-%25EA%25B0%2580%25EB%25B3%2580%25EC%2584%25B1-%25EC%259E%25AC%25ED%2599%259C%25EC%259A%25A9-cd0afc889d77&tbnid=Qh6EJgrubLmhbM&vet=12ahUKEwj6gvWE5aXuAhUFeZQKHamPC9cQMygBegUIARCnAQ..i&docid=WJre-J3kFZkPHM&w=680&h=440&q=python%20%EA%B0%99%EC%9D%80%20%EA%B0%9D%EC%B2%B4%20%EC%B0%B8%EC%A1%B0&ved=2ahUKEwj6gvWE5aXuAhUFeZQKHamPC9cQMygBegUIARCnAQ" width= "150px" alt="python_logo"></img>
-
 # 파이썬 문법
-------------------
-> 인덴트
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 인덴트
 : 파이썬의 인덴트(Indent)는 공식 가이드인 PEP 8에 따라 공백 4칸을 원칙으로 한다.
 
-> 네이밍 컨벤션
+### 네이밍 컨벤션
 : 파이썬의 변수명 네이밍 컨벤션(Naming Convention)은 각 단어를 밑줄(_)로 구분하여 표기하는 스네이크 케이스(Snake Case)를 따른다.
 
 ### 타입힌트
