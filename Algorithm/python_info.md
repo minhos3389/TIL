@@ -1,5 +1,5 @@
 
-<img src ="C:\Users\1\Desktop\python_image.jpg" width= "150px" alt="python_logo"></img>
+<img src ="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmiro.medium.com%2Fmax%2F680%2F1*EtUKaZLEF9k2QYCq6gaROw.jpeg&imgrefurl=https%3A%2F%2Fmedium.com%2Fhumanscape-tech%2F%25ED%258C%258C%25EC%259D%25B4%25EC%258D%25AC%25EC%259D%2598-%25EA%25B0%259D%25EC%25B2%25B4-%25EC%25B0%25B8%25EC%25A1%25B0-%25EA%25B0%2580%25EB%25B3%2580%25EC%2584%25B1-%25EC%259E%25AC%25ED%2599%259C%25EC%259A%25A9-cd0afc889d77&tbnid=Qh6EJgrubLmhbM&vet=12ahUKEwj6gvWE5aXuAhUFeZQKHamPC9cQMygBegUIARCnAQ..i&docid=WJre-J3kFZkPHM&w=680&h=440&q=python%20%EA%B0%99%EC%9D%80%20%EA%B0%9D%EC%B2%B4%20%EC%B0%B8%EC%A1%B0&ved=2ahUKEwj6gvWE5aXuAhUFeZQKHamPC9cQMygBegUIARCnAQ" width= "150px" alt="python_logo"></img>
 
 # 파이썬 문법
 ------------------
@@ -13,7 +13,7 @@
 : 파이썬은 동적 타이핑 언어임에도 , 타입을 지정할 수 있는 타입힌트(Type Hint)가 PEP484에서 추가되었다.
 가독성을 높이고 버그 발생확률을 줄일 수 있다.
 
-```
+```Python
 
 def fn(a: int) -> bool:
     ...
@@ -23,7 +23,7 @@ fn()함수의 파라미터 a가 정수형임을 알 수 있고, 리턴 값으로
 물론 실제로는 강제 규약이 아니다 보니, 여전히 동적으로 할당될 수 있으므로 주의해야 한다.
 
 mypy를 통해서 타입힌트에 오류가 있는지 자동 확인가능하다.
-```
+```Python
     $ pip install mypy
 
     $ mypy solution.py
@@ -34,26 +34,26 @@ mypy를 통해서 타입힌트에 오류가 있는지 자동 확인가능하다.
 ### 리스트 컴프리헨션
 :파이썬은 map,filter 와 같은 함수형 기능을 지원하며 다음과 같은 람다 표현식도 지원한다.
 
-```
+```Python
     >>> list(map(lamda x:x + 10,[1, 2, 3]))
     [11,12,13]
 
 ```
 
 파이썬에서는 람다표현식에 map이나 filter를 섞어 사용하는 것보다 가독성이 높은 리스트 컴프리헨션을 지원한다.
-```
-    // 홀수인 경우 2를 곱해 출력하라는 리스트 컴프리헨션
+```Python
+    # 홀수인 경우 2를 곱해 출력하라는 리스트 컴프리헨션
     >>> [n*2 for n in range(1, 10 + 1) if n % 2 == 1]
     [2, 6, 10, 14, 18]
 ```
 
 딕셔너리에서도 리스트 컴프리헨션 가능하다.
-```
+```Python
     a = {}
     for key, value in original.items():
         a[key] = value
 
-    // 리스트 컴프리헨션 적용시
+    #  리스트 컴프리헨션 적용시
     a = {key: value for key, value in original.items()}
 ```
 
@@ -64,7 +64,7 @@ mypy를 통해서 타입힌트에 오류가 있는지 자동 확인가능하다.
 ### range 
 :제너레이터의 방식을 활용하는 대표적인 함수로 range()가 있다. 주로 for 문에서 쓰이는 range() 함수의 쓰임은 다음과 같다.
 
-```
+```Python
     >>> list(range(5))
     [0, 1, 2, 3, 4]
     
@@ -83,14 +83,15 @@ range()는 range클래스를 리턴하며, for 문에서 사용할 경우 내부
 ### enumerate
 enumerate()는 '열거하다'는 뜻의 함수로, 순서가 있는 자료형(list, set, tuple등)을 인덱스를 포함한 enumerate객체로 리턴한다.
 
-```
-    >>>a = [1,2,3,2,45,2,5]
-    >>>a 
-    [1, 2, 3, 2, 45 ,2, 5]
-    >>>enumerate(a)
+```Python
+    a = [1,2,3,2,45,2,5]
+    a 
+    # [1, 2, 3, 2, 45 ,2, 5]
+    
+    enumerate(a)
     <enumerate object at 0x1010f83f0>
-    >>>list(enumerate(a))
-    [(0, 1), (1, 2), (2, 3), (3, 2), (4, 45), (5, 2), (6, 5)]
+    list(enumerate(a))
+    # [(0, 1), (1, 2), (2, 3), (3, 2), (4, 45), (5, 2), (6, 5)]
 ```
 
 이처럼 list()로 결과를 추출할 수 있는데 , index를 자동으로 부여해주기 때문에 편리하게 사용된다.
