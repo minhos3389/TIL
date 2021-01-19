@@ -174,7 +174,7 @@ pass는 널 연산(Null Operation)으로 아무것도 하지 않는 기능이다
 ```
 
 ### 코딩스타일
-> [파이썬의 PEP 8](https://www.python.org/dev/peps/pep-0008/)
+> [파이썬의 PEP 8](https://www.python.org/dev/peps/pep-0008/) <br>
   [구글의파이썬 스타일가이드](http://google.github.io/styleguide/pyguide.html)
 
 ### 변수명과 주석
